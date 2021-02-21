@@ -13,7 +13,7 @@ function switchIM()
         local program_im = fcitx.splitString(v,":")
 
         -- 如果当前程序名称和环境变量指定的程序名称相同，则将输入法切换为指定的输入法
-        if (program_im[1] == fcitx.CurrentProgram()) then
+        if (program_im[1] == fcitx.currentProgram()) then
             fcitx.setCurrentInputMethod(program_im[2],true)
         end
     end
